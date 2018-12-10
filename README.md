@@ -1,1 +1,1 @@
-# react-media-editor
+# Media

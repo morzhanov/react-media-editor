@@ -1,0 +1,30 @@
+html {
+  overflow-x: hidden;
+  margin: 0 !important;
+  -webkit-font-smoothing: antialiased;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  color: #fff;
+  text-align: left;
+  font-size: 14px;
+  font-family: Arial;
+  font-weight: normal;
+  -webkit-text-size-adjust: none;
+  overflow-x: visible !important;
+}
+* {
+  box-sizing: border-box;
+}
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}

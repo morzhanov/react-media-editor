@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg preserveAspectRatio='none' width="570px" height="36px" viewBox="0 0 570 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path d="M569.999983,0 L569.999981,1.66353751 C569.999981,9.12622539 564.513991,15.4539435 557.12669,16.5120072 C466.417792,29.5040055 375.708892,36.0000031 284.999992,36 C194.291092,35.9999969 103.582192,29.5039933 12.8732929,16.5119889 L12.8732929,16.5119893 C5.4859907,15.4539248 3.516438e-07,9.12620488 1.27287732e-06,1.66351545 L1.47823039e-06,0 L569.999983,0 Z" id="path-1"></path>
+    </defs>
+    <g id="img_form_modal_top_light" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Mask" fill="#002846" transform="translate(284.999992, 18.000000) scale(-1, -1) translate(-284.999992, -18.000000) " xlink:href="#path-1"></use>
+    </g>
+</svg>

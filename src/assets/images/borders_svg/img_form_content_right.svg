@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg  preserveAspectRatio='none' width="76px" height="386px" viewBox="0 0 76 386" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path d="M0,386 C-1.77635684e-15,155.333333 -1.77635684e-15,26.6666667 0,0 C47.4737261,74.3301744 76,173.165039 76,268 C76,298.871821 73.0830097,356.757609 67.5104757,386 C53.2559249,386 30.752433,386 0,386 Z" id="path-1"></path>
+    </defs>
+    <g id="img_form_content_right" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Mask" fill="#002846" xlink:href="#path-1"></use>
+    </g>
+</svg>

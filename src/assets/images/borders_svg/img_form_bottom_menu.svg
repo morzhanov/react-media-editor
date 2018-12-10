@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg  preserveAspectRatio='none' width="1920px" height="24px" viewBox="0 0 1920 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="img_form_bottom_menu" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" >
+        <path d="M1920,3.33066907e-15 L1920,6.68080664 C1785.27538,10.6166558 1684.23191,11.9648458 1616.8696,10.7253766 C1397.91307,6.69656751 1178.95653,-0.231058087 960,-0.231058087 C738.539171,-0.231058087 463.745009,19.6507059 242.28418,23.7722002 C176.5914,24.994775 95.8300061,21.2962875 0,12.6767376 L0,3.33066907e-15 L1920,3.33066907e-15 Z" id="bg_main_menu" fill="#002846"></path>
+    </g>
+</svg>

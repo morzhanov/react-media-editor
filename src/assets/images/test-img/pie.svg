@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="133px" height="138px" viewBox="0 0 133 138" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M40,80 C62.09139,80 80,62.09139 80,40 C80,17.90861 62.09139,0 40,0 C17.90861,0 0,17.90861 0,40 C0,62.09139 17.90861,80 40,80 Z" id="path-1"></path>
+        <filter x="-56.2%" y="-63.8%" width="212.5%" height="212.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="6" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="-6" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="6" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="-6" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="12" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.31 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Qravity-Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2_4_timer_step2_sign_up_ICO_Landing" transform="translate(-437.000000, -92.000000)">
+            <g id="projects_my">
+                <g id="Group" transform="translate(466.000000, 115.000000)">
+                    <g id="Group-2">
+                        <circle id="Oval-2" stroke-opacity="0.11" stroke="#FFFFFF" stroke-width="8" cx="40" cy="40" r="40"></circle>
+                        <g id="pie-chart-bg" stroke-linecap="round" stroke-dasharray="237.1000061035156,1377.931030273438" transform="translate(40.000000, 40.000000) scale(1, -1) translate(-40.000000, -40.000000) ">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                            <use stroke="" stroke-width="12" xlink:href="#path-1"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

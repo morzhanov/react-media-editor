@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg preserveAspectRatio='none' width="100%" height="100%" viewBox="0 0 570 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>svg-bg-popup-heading</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="slice" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" fill="#00233d">
+            <path d="M0,32 C2.52128531e-07,24.4652289 5.62011912,18.1066774 13.1162121,17.1604192 C103.74414,5.72013703 194.372069,-2.69678257e-06 284.999999,0 C375.627928,2.69678221e-06 466.255857,5.72014774 556.883786,17.1604351 C564.37988,18.1066916 570,24.4652447 570,32 C570,32 475.039794,31.9999827 284.999999,31.9999827 C232.540719,31.9999827 137.54072,31.9999884 0,32 Z" id="svg-bg-popup-heading"></path>
+        </g>
+    </g>
+</svg>
