@@ -15,7 +15,8 @@ class AudioChart extends React.Component {
       height: props.width / props.ratio,
       stepHeight: props.stepHeight,
       data: null,
-      maxSteps: props.maxSteps
+      maxSteps: props.maxSteps,
+      ratio: props.ratio
     }
     this.canvas = React.createRef()
   }
@@ -73,11 +74,11 @@ class AudioChart extends React.Component {
 
   changeSize = () => {
     this.setState(state => ({
-      width: this.canvas.offsetWidth,
-      height: this.canvas.offsetWidth / state.ratio
+      width: this.canvas.current.offsetWidth,
+      height: this.canvas.current.offsetWidth / state.ratio
     }))
 
-    const parent = this.canvas.parentNode
+    const parent = this.canvas.current.parentNode
     setTimeout(() => {
       if (parent) {
         this.setState(state => ({
@@ -95,7 +96,7 @@ class AudioChart extends React.Component {
   drawData = buff => {
     const { width, height, stepHeight, maxSteps } = this.state
     const { canvas } = this
-    const ctx = canvas.getContext('2d')
+    const ctx = canvas.current.getContext('2d')
     let leftChannel = buff.getChannelData(0)
     // reduce count of steps entries
     if (leftChannel.length > maxSteps * 2) {
@@ -125,7 +126,7 @@ class AudioChart extends React.Component {
   drawProgress = progress => {
     const { width, height } = this.state
     const { canvas } = this
-    const ctx = canvas.getContext('2d')
+    const ctx = canvas.current.getContext('2d')
     ctx.font = `${height / 20}px Arial`
     ctx.fillStyle = '#fff'
     ctx.textAlign = 'center'

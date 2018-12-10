@@ -13,6 +13,7 @@
   "author": "Vlad Morzhanov",
   "license": "MIT",
   "dependencies": {
+    "lodash": "^4.17.11",
     "react": "^16.5.0",
     "react-color": "^2.14.1",
     "react-dom": "^16.5.0",

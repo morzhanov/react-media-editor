@@ -2,7 +2,7 @@ import Text from './entities/Text'
 import Tools from './entities/Tools'
 import Shape from './entities/Shape'
 import Path from './entities/Path'
-import { includes } from '../../utils/helpers'
+import { includes } from 'lodash'
 
 class CanvasController {
   init = data => {
