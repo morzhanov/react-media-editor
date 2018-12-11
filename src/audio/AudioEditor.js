@@ -91,7 +91,9 @@ class AudioEditor extends React.Component {
           {this.state.audio && (
             <Controls
               showProgressBar={false}
-              ref={this.controlsRef}
+              ref={ref => {
+                this.controlsRef = ref
+              }}
               media={this.state.audio}
             />
           )}
