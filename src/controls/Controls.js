@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Playback from './Playback'
 import Time from './Time'
 import Progress from './Progress'
 import Volume from './Volume'
 
-class Controls extends Component {
+class Controls extends React.Component {
   static defaultProps = {
     showProgressBar: true
   }

@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { PauseIcon, PlayIcon } from './icons'
 
 const Playback = ({ playbackHandler, paused }) => {

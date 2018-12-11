@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import DrawTools from './DrawTools'
 import CanvasController from './CanvasController'
 
-class CanvasPainter extends Component {
+class CanvasPainter extends React.Component {
   static defaultProps = {
     width: 400,
     height: 400,

@@ -1,5 +1,4 @@
 import React from 'react'
-import { SketchPicker } from 'react-color'
 
 class DrawTools extends React.Component {
   constructor(props) {
@@ -75,6 +74,7 @@ class DrawTools extends React.Component {
   }
 
   render() {
+    const ColorPicker = this.props.picker
     return (
       <div className="canvas-painter-tools" style={{ display: 'flex' }}>
         {!this.state.opened && (
@@ -101,7 +101,7 @@ class DrawTools extends React.Component {
           <>
             {this.toolsItems.map((item, i) => this.renderToolsItem(item, i))}
             {this.state.showPicker && (
-              <SketchPicker
+              <ColorPicker
                 style={{ position: 'absolute', top: 70, left: 50 }}
                 onChangeComplete={this.onColorPicked}
               />

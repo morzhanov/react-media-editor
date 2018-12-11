@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactModal from 'react-modal'
 
 export default class AddCommentPopup extends React.Component {
   state = { visible: false }

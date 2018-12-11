@@ -1,6 +1,4 @@
 import './assets/styles/main.css'
-import './assets/styles/editor.css'
-
 import React from 'react'
 import { render } from 'react-dom'
 import Audio from './components/Audio'

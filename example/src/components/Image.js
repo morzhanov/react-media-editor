@@ -1,6 +1,6 @@
 import React from 'react'
 import MediaEditor, { TYPE_IMAGE } from 'react-media-editor'
-import ExampleImage from '../../assets/images/test-img/bg-home.jpg'
+import ExampleImage from '../assets/img/example.png'
 
 class Image extends React.Component {
   state = { ratio: 16 / 9, image: null }

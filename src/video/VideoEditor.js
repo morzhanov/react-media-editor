@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 import VideoPlayer from './VideoPlayer'
 import CanvasPainter from '../painter/CanvasPainter'
 import Controls from '../controls/Controls'
 
-class VideoEditor extends Component {
+class VideoEditor extends React.Component {
   canvasPainter = React.createRef()
 
   componentDidMount() {

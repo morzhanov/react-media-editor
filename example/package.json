@@ -16,9 +16,9 @@
   "author": "Vlad Morzhanov",
   "license": "MIT",
   "dependencies": {
-    "react": "^16.5.0",
-    "react-dom": "^16.5.0",
-    "react-media-editor": "latest"
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-media-editor": "1.8.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.51",
@@ -44,6 +44,7 @@
     "babel-cli": "^6.26.0",
     "babel-eslint": "^9.0.0",
     "babel-loader": "^8.0.0",
+    "babel-preset-react": "^6.24.1",
     "case-sensitive-paths-webpack-plugin": "^2.1.2",
     "css-loader": "^0.28.11",
     "dotenv": "^6.0.0",
@@ -59,11 +60,13 @@
     "fs-extra": "^7.0.0",
     "html-loader": "^1.0.0-alpha.0",
     "html-webpack-plugin": "^3.0.4",
+    "lodash": "^4.17.11",
     "prettier": "^1.10.2",
     "prettier-eslint": "^8.8.2",
     "prop-types": "^15.6.0",
     "react-dev-utils": "^5.0.1",
     "react-hot-loader": "^4.3.3",
+    "react-modal": "^3.7.1",
     "style-loader": "^0.20.2",
     "sw-precache-webpack-plugin": "^0.11.5",
     "uglifyjs-webpack-plugin": "^1.2.7",
