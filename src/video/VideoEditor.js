@@ -30,7 +30,9 @@ class VideoEditor extends React.Component {
       <div style={{ width: '100%', backgroundColor: '#000' }}>
         <CanvasPainter
           forceRedraw={this.forceRedraw}
-          ref={this.canvasPainter}
+          ref={ref => {
+            this.canvasPainter = ref
+          }}
         />
         {media && <Controls media={media} />}
       </div>
