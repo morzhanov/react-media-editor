@@ -1,6 +1,6 @@
 {
   "name": "react-media-editor",
-  "version": "1.9.7",
+  "version": "1.9.9",
   "description": "React media editor",
   "main": "dist/index.min.js",
   "scripts": {
