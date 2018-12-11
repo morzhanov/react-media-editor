@@ -1,6 +1,6 @@
 {
   "name": "react-media-editor",
-  "version": "1.8.0",
+  "version": "1.9.2",
   "description": "React media editor",
   "main": "dist/index.min.js",
   "scripts": {
@@ -38,5 +38,9 @@
     "rollup": "^0.67.4",
     "rollup-plugin-babel": "^4.0.3",
     "rollup-plugin-uglify": "^6.0.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "react": "^16.6.3"
   }
 }

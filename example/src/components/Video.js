@@ -1,5 +1,5 @@
 import React from 'react'
-import MediaEditor, { TYPE_VIDEO } from 'react-media-editor'
+import { Editor, TYPE_VIDEO } from 'react-media-editor'
 
 class Video extends React.Component {
   state = { ratio: 16 / 9, video: null }
@@ -31,7 +31,7 @@ class Video extends React.Component {
     return (
       <div className="page-wrapper editor">
         <div className="container">
-          <MediaEditor type={TYPE_VIDEO} media={video} ratio={ratio} />
+          <Editor type={TYPE_VIDEO} media={video} ratio={ratio} />
         </div>
       </div>
     )

@@ -1,5 +1,5 @@
 import React from 'react'
-import MediaEditor, { TYPE_IMAGE } from 'react-media-editor'
+import { TYPE_IMAGE, Editor } from 'react-media-editor'
 import ExampleImage from '../assets/img/example.png'
 
 class Image extends React.Component {
@@ -20,7 +20,7 @@ class Image extends React.Component {
     return (
       <div className="page-wrapper editor">
         <div className="container">
-          <MediaEditor type={TYPE_IMAGE} media={image} ratio={ratio} />
+          <Editor type={TYPE_IMAGE} media={image} ratio={ratio} />
         </div>
       </div>
     )

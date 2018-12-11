@@ -37,7 +37,7 @@ export default class AddCommentPopup extends React.Component {
     }
 
     return (
-      <ReactModal
+      <div
         isOpen={this.state.visible}
         className="modal-block"
         overlayClassName="modal-wrapper"
@@ -68,7 +68,7 @@ export default class AddCommentPopup extends React.Component {
             </button>
           </div>
         </div>
-      </ReactModal>
+      </div>
     )
   }
 }
