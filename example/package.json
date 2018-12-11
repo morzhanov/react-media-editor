@@ -16,11 +16,9 @@
   "author": "Vlad Morzhanov",
   "license": "MIT",
   "dependencies": {
-    "lodash": "^4.17.11",
     "react": "^16.5.0",
-    "react-color": "^2.14.1",
     "react-dom": "^16.5.0",
-    "react-modal": "^3.7.1"
+    "react-media-editor": "latest"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.51",

@@ -82,7 +82,7 @@ class AudioEditor extends React.Component {
       <div
         style={{ width: '100%', background: 'transparent', display: 'flex' }}
       >
-        <div className="container">
+        <div style={{ backgroundColor: '#000' }}>
           <AudioChart
             progressClickHandler={this.progressClickHandler}
             progress={this.state.progress}

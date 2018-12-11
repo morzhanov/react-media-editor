@@ -1,5 +1,5 @@
 import React from 'react'
-import MediaEditor, { TYPE_IMAGE } from '../MediaEditor'
+import MediaEditor, { TYPE_IMAGE } from 'react-media-editor'
 import ExampleImage from '../../assets/images/test-img/bg-home.jpg'
 
 class Image extends React.Component {

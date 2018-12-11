@@ -76,9 +76,24 @@ class DrawTools extends React.Component {
 
   render() {
     return (
-      <div className="canvas-painter-tools">
+      <div className="canvas-painter-tools" style={{ display: 'flex' }}>
         {!this.state.opened && (
-          <div className="tools-item" onClick={this.toggleOpen}>
+          <div
+            style={{
+              marginRight: 24,
+              fontSize: 18,
+              color: '#fff',
+              fontWeight: 'bold',
+              padding: 10,
+              border: '2px solid #fff',
+              borderRadius: 4,
+              fontFamily: 'Arial, Helvetica, sans-serif',
+              cursor: 'pointer',
+              transition: '300ms ease all'
+            }}
+            className="tools-item"
+            onClick={this.toggleOpen}
+          >
             Open Tools
           </div>
         )}
@@ -86,7 +101,10 @@ class DrawTools extends React.Component {
           <>
             {this.toolsItems.map((item, i) => this.renderToolsItem(item, i))}
             {this.state.showPicker && (
-              <SketchPicker onChangeComplete={this.onColorPicked} />
+              <SketchPicker
+                style={{ position: 'absolute', top: 70, left: 50 }}
+                onChangeComplete={this.onColorPicked}
+              />
             )}
           </>
         )}

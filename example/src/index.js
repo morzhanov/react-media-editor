@@ -3,9 +3,9 @@ import './assets/styles/editor.css'
 
 import React from 'react'
 import { render } from 'react-dom'
-import Audio from './components/Example/Audio'
-import Video from './components/Example/Video'
-import Image from './components/Example/Image'
+import Audio from './components/Audio'
+import Video from './components/Video'
+import Image from './components/Image'
 
 const rootNode = document.getElementById('app')
 

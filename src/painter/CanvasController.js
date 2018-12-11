@@ -1,8 +1,8 @@
+import { includes } from 'lodash'
 import Text from './entities/Text'
 import Tools from './entities/Tools'
 import Shape from './entities/Shape'
 import Path from './entities/Path'
-import { includes } from 'lodash'
 
 class CanvasController {
   init = data => {
@@ -106,12 +106,17 @@ class CanvasController {
     const input = document.createElement('input')
     parent.appendChild(input)
 
+    input.style.position = 'absolute'
+    input.style.outline = 'none'
+    input.style.border = 'none'
+    input.style.background = 'transparent'
+    input.style.fontWeight = 'bold'
+    input.style.zIndex = '1000'
     input.style.borderBottom = `2px solid ${this.brushColor}`
     input.style.fontSize = this.textSize
     input.style.color = this.brushColor
     input.style.left = `${x}px`
     input.style.top = `${y + this.textSize}px`
-
     input.autofocus = true
     input.onkeydown = this.handleTextEnter
     input.focus()
