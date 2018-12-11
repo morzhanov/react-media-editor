@@ -38,11 +38,8 @@ export default class AddCommentPopup extends React.Component {
 
     return (
       <div
-        isOpen={this.state.visible}
+        style={{ display: this.state.visible ? 'block' : 'none' }}
         className="modal-block"
-        overlayClassName="modal-wrapper"
-        shouldCloseOnOverlayClick
-        onRequestClose={this.cancelAction}
       >
         <div className="modal-header">
           <h4>Add comment</h4>

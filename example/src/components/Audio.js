@@ -1,5 +1,6 @@
 import React from 'react'
-import { Editor, TYPE_AUDIO } from 'react-media-editor'
+// import { Editor, TYPE_AUDIO } from 'react-media-editor'
+import { Editor, TYPE_AUDIO } from '../../../dist/index.min'
 
 const Audio = () => (
   <div className="page-wrapper editor">

@@ -4,10 +4,11 @@ import CanvasPainter from '../painter/CanvasPainter'
 class ImageEditor extends React.Component {
   componentDidMount() {
     this.renderImage()
-    this.canvasPainter = React.createRef()
   }
 
   renderImage = () => {
+    if (!this.canvasPainter) return
+
     const { canvas, ctx } = this.canvasPainter || {}
     const { image, ratio } = this.props
     if (canvas && image) {
@@ -18,11 +19,13 @@ class ImageEditor extends React.Component {
   render() {
     const { image } = this.props
     return image ? (
-      <div style={{ width: '100%' }}>
+      <div style={{ width: '100%', backgroundColor: '#000' }}>
         <CanvasPainter
           forceRedraw={this.renderImage}
           beforeRender={this.renderImage}
-          ref={this.canvasPainter}
+          ref={ref => {
+            this.canvasPainter = ref
+          }}
         />
       </div>
     ) : null

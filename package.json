@@ -4,7 +4,8 @@
   "description": "React media editor",
   "main": "dist/index.min.js",
   "scripts": {
-    "build": "rollup -c -o dist/index.min.js"
+    "build": "rollup -c -o dist/index.min.js",
+    "watch": "rollup -w -c -o dist/index.min.js"
   },
   "keywords": [
     "media",

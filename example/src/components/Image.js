@@ -1,5 +1,6 @@
 import React from 'react'
-import { TYPE_IMAGE, Editor } from 'react-media-editor'
+// import { TYPE_IMAGE, Editor } from 'react-media-editor'
+import { Editor, TYPE_IMAGE } from '../../../dist/index.min'
 import ExampleImage from '../assets/img/example.png'
 
 class Image extends React.Component {

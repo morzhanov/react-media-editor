@@ -1,6 +1,19 @@
 import React from 'react'
 
 class DrawTools extends React.Component {
+  buttonStyle = {
+    marginRight: 24,
+    fontSize: 18,
+    color: '#fff',
+    fontWeight: 'bold',
+    padding: 10,
+    border: '2px solid #fff',
+    borderRadius: 4,
+    fontFamily: 'Arial, Helvetica, sans-serif',
+    cursor: 'pointer',
+    transition: '300ms ease all'
+  }
+
   constructor(props) {
     super(props)
     const { onToolsChange, onUndo, onClear, onSave, onClose } = props
@@ -51,7 +64,7 @@ class DrawTools extends React.Component {
         name: 'Close',
         onClick: () => {
           this.toggleOpen()
-          onClose()
+          if (onClose) onClose()
         }
       }
     ]
@@ -64,7 +77,12 @@ class DrawTools extends React.Component {
   }
 
   renderToolsItem = (item, key) => (
-    <div onClick={item.onClick} key={key} className="tools-item">
+    <div
+      style={this.buttonStyle}
+      onClick={item.onClick}
+      key={key}
+      className="tools-item"
+    >
       {item.name}
     </div>
   )
@@ -79,18 +97,7 @@ class DrawTools extends React.Component {
       <div className="canvas-painter-tools" style={{ display: 'flex' }}>
         {!this.state.opened && (
           <div
-            style={{
-              marginRight: 24,
-              fontSize: 18,
-              color: '#fff',
-              fontWeight: 'bold',
-              padding: 10,
-              border: '2px solid #fff',
-              borderRadius: 4,
-              fontFamily: 'Arial, Helvetica, sans-serif',
-              cursor: 'pointer',
-              transition: '300ms ease all'
-            }}
+            style={this.buttonStyle}
             className="tools-item"
             onClick={this.toggleOpen}
           >

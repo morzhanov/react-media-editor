@@ -1,5 +1,6 @@
 import React from 'react'
-import { Editor, TYPE_VIDEO } from 'react-media-editor'
+// import { Editor, TYPE_VIDEO } from 'react-media-editor'
+import { Editor, TYPE_VIDEO } from '../../../dist/index.min'
 
 class Video extends React.Component {
   state = { ratio: 16 / 9, video: null }
