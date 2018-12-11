@@ -19,7 +19,7 @@ class ImageEditor extends React.Component {
   render() {
     const { image } = this.props
     return image ? (
-      <div style={{ width: '100%', backgroundColor: '#000' }}>
+      <div style={{ width: '100%' }}>
         <CanvasPainter
           forceRedraw={this.renderImage}
           beforeRender={this.renderImage}

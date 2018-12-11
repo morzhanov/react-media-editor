@@ -83,6 +83,7 @@ class CanvasPainter extends React.Component {
             }
           }}
           style={{
+            background: '#000',
             display: 'block',
             touchAction: 'none',
             ...style

@@ -1,35 +1,43 @@
 import React from 'react'
+import shortid from 'shortid'
+
+const listStyles = {
+  minHeight: 302,
+  minWidth: 500,
+  padding: 20,
+  border: '1px solid #ccc',
+  backgroundColor: '#fff'
+}
+const itemStyles = {
+  minHeight: 60,
+  color: '#555',
+  fontSize: 20,
+  marginBottom: 20,
+  backgroundColor: '#fff',
+  border: '1px solid #aaa',
+  borderRadius: 4,
+  padding: 8,
+  cursor: 'pointer'
+}
 
 const CommentsList = props => {
-  const listStyles = {
-    height: '100%',
-    width: 500,
-    padding: 20,
-    backgroundColor: '#225'
-  }
-  const itemStyles = {
-    width: '100%',
-    height: 40,
-    color: '#fff',
-    fontSize: 20,
-    marginBottom: 20,
-    backgroundColor: '#448',
-    cursor: 'pointer',
-    textAlign: 'center',
-    lineHeight: '40px'
-  }
   const { comments, goToTimeMark } = props
   return (
     <div style={listStyles}>
-      {comments.map(comment => (
-        <div
-          style={itemStyles}
-          onClick={() => goToTimeMark(comment.progressMark)}
-          key={comment.text.substr(0, comment.text.length / 2)}
-        >
-          {comment.text}
-        </div>
-      ))}
+      <h3 style={{ marginLeft: '-10px', marginTop: '-10px', color: '#666' }}>
+        Comments
+      </h3>
+      {comments.map(comment =>
+        comment && comment.text ? (
+          <div
+            style={itemStyles}
+            onClick={() => goToTimeMark(comment.progressMark)}
+            key={shortid.generate()}
+          >
+            {comment.text}
+          </div>
+        ) : null
+      )}
     </div>
   )
 }

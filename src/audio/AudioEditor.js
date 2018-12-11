@@ -72,17 +72,16 @@ class AudioEditor extends React.Component {
   }
 
   render() {
+    const { enableComments, showCommentsList = true } = this.props
     const addCommentButtonStyles = {
-      width: 200,
-      height: 64,
-      fontSize: 24,
-      marginTop: 24
+      width: '100%',
+      height: '48px',
+      fontSize: '16px',
+      marginTop: '12px'
     }
     return (
-      <div
-        style={{ width: '100%', background: 'transparent', display: 'flex' }}
-      >
-        <div style={{ backgroundColor: '#000' }}>
+      <div style={{ width: '100%', display: 'flex' }}>
+        <div>
           <AudioChart
             progressClickHandler={this.progressClickHandler}
             progress={this.state.progress}
@@ -98,23 +97,29 @@ class AudioEditor extends React.Component {
             />
           )}
         </div>
-        <aside>
-          <CommentsList
-            goToTimeMark={this.progressClickHandler}
-            comments={this.state.comments}
-          />
-          <button
-            type="button"
-            style={addCommentButtonStyles}
-            onClick={this.showCommentsPopup}
-          >
-            Add comment
-          </button>
-          <AddCommentPopup
-            successCallback={this.successCommentCallback}
-            ref={this.commentsModal}
-          />
-        </aside>
+        {enableComments && (
+          <aside style={{ padding: 20, paddingTop: 0 }}>
+            {showCommentsList && (
+              <CommentsList
+                goToTimeMark={this.progressClickHandler}
+                comments={this.state.comments}
+              />
+            )}
+            <button
+              type="button"
+              style={addCommentButtonStyles}
+              onClick={this.showCommentsPopup}
+            >
+              Add comment
+            </button>
+            <AddCommentPopup
+              successCallback={this.successCommentCallback}
+              ref={ref => {
+                this.commentsModal = ref
+              }}
+            />
+          </aside>
+        )}
       </div>
     )
   }
