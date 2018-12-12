@@ -19,7 +19,7 @@
     "react": "^16.6.3",
     "react-color": "^2.14.1",
     "react-dom": "^16.6.3",
-    "react-media-editor": "latest"
+    "react-media-editor": "^2.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.51",
