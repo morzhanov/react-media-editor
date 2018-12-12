@@ -1,48 +1,16 @@
 import React from 'react'
 import { SketchPicker } from 'react-color'
-// import { Editor, TYPE_VIDEO } from 'react-media-editor'
-import { Editor, TYPE_VIDEO } from '../../../dist/index.min'
+import { VideoEditor } from 'react-media-editor'
 
-class Video extends React.Component {
-  state = { ratio: 16 / 9, video: null }
-
-  componentDidMount = () => {
-    const media = document.createElement('video')
-    const source = document.createElement('source')
-    const src =
-      'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
-    source.setAttribute('src', src)
-    media.appendChild(source)
-
-    const checkLoad = () => {
-      if (media.readyState === 4) {
-        const ratio = media.videoWidth / media.videoHeight
-        this.setState({ ratio, video: media })
-      } else {
-        setTimeout(checkLoad, 100)
-      }
-    }
-
-    window.addEventListener('load', checkLoad, false)
-    media.load()
-  }
-
-  render() {
-    const { video, ratio } = this.state
-
-    return (
-      <div className="page-wrapper editor">
-        <div className="container">
-          <Editor
-            colorPicker={SketchPicker}
-            type={TYPE_VIDEO}
-            media={video}
-            ratio={ratio}
-          />
-        </div>
-      </div>
-    )
-  }
-}
+const Video = () => (
+  <div className="page-wrapper editor">
+    <div className="container">
+      <VideoEditor
+        colorPicker={SketchPicker}
+        src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+      />
+    </div>
+  </div>
+)
 
 export default Video

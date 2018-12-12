@@ -1,1 +1,2 @@
-export Editor, { TYPE_VIDEO, TYPE_IMAGE } from './Editor'
+export VideoEditor from './video/VideoEditor'
+export ImageEditor from './image/ImageEditor'

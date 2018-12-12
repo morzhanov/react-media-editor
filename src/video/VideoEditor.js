@@ -6,18 +6,42 @@ import Controls from '../controls/Controls'
 class VideoEditor extends React.Component {
   canvasPainter = React.createRef()
 
+  state = { ratio: 16 / 9, video: null }
+
   componentDidMount() {
-    this.videPlayer = new VideoPlayer(
-      this.canvasPainter.canvas,
-      this.canvasPainter.ctx,
-      this.props.media,
-      this.props.ratio,
-      this.playerDrawCallback
-    )
+    const { src } = this.props
+
+    const media = document.createElement('video')
+    media.setAttribute('crossorigin', 'anonymous')
+    const source = document.createElement('source')
+    source.setAttribute('src', src)
+    media.appendChild(source)
+
+    const checkLoad = () => {
+      if (media.readyState === 4) {
+        const ratio = media.videoWidth / media.videoHeight
+        this.setState({ ratio, media })
+      } else {
+        setTimeout(checkLoad, 100)
+      }
+    }
+
+    window.addEventListener('load', checkLoad, false)
+    media.load()
   }
 
   componentWillUnmount() {
     this.videPlayer.destroy()
+  }
+
+  initPlayer = () => {
+    this.videPlayer = new VideoPlayer(
+      this.canvasPainter.canvas,
+      this.canvasPainter.ctx,
+      this.state.media,
+      this.state.ratio,
+      this.playerDrawCallback
+    )
   }
 
   playerDrawCallback = () => this.canvasPainter.redraw()
@@ -25,7 +49,11 @@ class VideoEditor extends React.Component {
   forceRedraw = () => this.videPlayer.drawVideo(true)
 
   render() {
-    const { media, colorPicker } = this.props
+    const { media } = this.state
+    const { colorPicker, src } = this.props
+
+    if (!media || !src) return null
+
     return (
       <div style={{ width: '100%' }}>
         <CanvasPainter
@@ -33,6 +61,7 @@ class VideoEditor extends React.Component {
           forceRedraw={this.forceRedraw}
           ref={ref => {
             this.canvasPainter = ref
+            this.initPlayer()
           }}
         />
         {media && <Controls media={media} />}
