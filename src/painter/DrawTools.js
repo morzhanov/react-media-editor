@@ -94,7 +94,10 @@ class DrawTools extends React.Component {
   render() {
     const ColorPicker = this.props.picker
     return (
-      <div className="canvas-painter-tools" style={{ display: 'flex' }}>
+      <div
+        className="canvas-painter-tools"
+        style={{ display: 'flex', background: '#888', padding: 12 }}
+      >
         {!this.state.opened && (
           <div
             style={this.buttonStyle}

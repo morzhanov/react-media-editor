@@ -1,6 +1,6 @@
 {
   "name": "react-media-editor",
-  "version": "1.9.9",
+  "version": "2.0.0",
   "description": "React media editor",
   "main": "dist/index.min.js",
   "scripts": {
@@ -34,15 +34,12 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-react": "^7.11.1",
+    "lodash": "^4.17.11",
     "prettier": "^1.10.2",
     "prettier-eslint": "^8.8.2",
+    "react": "^16.6.3",
     "rollup": "^0.67.4",
     "rollup-plugin-babel": "^4.0.3",
     "rollup-plugin-uglify": "^6.0.0"
-  },
-  "dependencies": {
-    "lodash": "^4.17.11",
-    "react": "^16.6.3",
-    "shortid": "^2.2.14"
   }
 }
