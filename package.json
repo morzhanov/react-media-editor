@@ -1,6 +1,6 @@
 {
   "name": "react-media-editor",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "React media editor",
   "main": "dist/index.min.js",
   "scripts": {
@@ -12,6 +12,10 @@
     "react",
     "editor"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/morzhanov/react-media-editor"
+  },
   "author": "Vlad Morzhanov",
   "license": "MIT",
   "devDependencies": {
