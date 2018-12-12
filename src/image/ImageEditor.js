@@ -9,6 +9,7 @@ class ImageEditor extends React.Component {
   componentDidMount() {
     const { src } = this.props
     const img = new window.Image()
+    img.setAttribute('crossorigin', 'anonymous')
     img.onload = () => {
       const ratio = img.width / img.height
       this.setState({ ratio, media: img })
