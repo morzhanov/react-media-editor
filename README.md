@@ -122,7 +122,7 @@ import { SketchPicker } from 'react-color' // we will use SketchPicker
 
 ## More
 
-If you would like to edit images or video files please take a look on <a href="https://github.com/morzhanov/react-media-editor">react-media-editor</a> library.
+If you would like to add comments to audio files please take a look on <a href="https://github.com/morzhanov/react-audio-comments">react-audio-comments</a> library.
 
 ## Contributing
 
