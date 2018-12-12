@@ -25,10 +25,11 @@ class VideoEditor extends React.Component {
   forceRedraw = () => this.videPlayer.drawVideo(true)
 
   render() {
-    const { media } = this.props
+    const { media, colorPicker } = this.props
     return (
       <div style={{ width: '100%' }}>
         <CanvasPainter
+          colorPicker={colorPicker}
           forceRedraw={this.forceRedraw}
           ref={ref => {
             this.canvasPainter = ref

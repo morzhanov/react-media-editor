@@ -1,19 +1,6 @@
 import React from 'react'
 
 class DrawTools extends React.Component {
-  buttonStyle = {
-    marginRight: 24,
-    fontSize: 18,
-    color: '#fff',
-    fontWeight: 'bold',
-    padding: 10,
-    border: '2px solid #fff',
-    borderRadius: 4,
-    fontFamily: 'Arial, Helvetica, sans-serif',
-    cursor: 'pointer',
-    transition: '300ms ease all'
-  }
-
   constructor(props) {
     super(props)
     const { onToolsChange, onUndo, onClear, onSave, onClose } = props
@@ -70,6 +57,20 @@ class DrawTools extends React.Component {
     ]
   }
 
+  getButtonStyles = ({ display } = {}) => ({
+    marginRight: 24,
+    fontSize: 18,
+    color: '#fff',
+    fontWeight: 'bold',
+    padding: 10,
+    border: '2px solid #fff',
+    borderRadius: 4,
+    fontFamily: 'Arial, Helvetica, sans-serif',
+    cursor: 'pointer',
+    transition: '300ms ease all',
+    display
+  })
+
   onColorPicked = color => this.props.onColorChange(color)
 
   togglePicker = () => {
@@ -78,7 +79,10 @@ class DrawTools extends React.Component {
 
   renderToolsItem = (item, key) => (
     <div
-      style={this.buttonStyle}
+      style={this.getButtonStyles({
+        display:
+          item.name === 'Color' && !this.props.colorPicker ? 'none' : 'inherit'
+      })}
       onClick={item.onClick}
       key={key}
       className="tools-item"
@@ -92,7 +96,7 @@ class DrawTools extends React.Component {
   }
 
   render() {
-    const ColorPicker = this.props.picker
+    const ColorPicker = this.props.colorPicker
     return (
       <div
         className="canvas-painter-tools"
@@ -100,7 +104,7 @@ class DrawTools extends React.Component {
       >
         {!this.state.opened && (
           <div
-            style={this.buttonStyle}
+            style={this.getButtonStyles()}
             className="tools-item"
             onClick={this.toggleOpen}
           >
@@ -110,11 +114,10 @@ class DrawTools extends React.Component {
         {this.state.opened && (
           <>
             {this.toolsItems.map((item, i) => this.renderToolsItem(item, i))}
-            {this.state.showPicker && (
-              <ColorPicker
-                style={{ position: 'absolute', top: 70, left: 50 }}
-                onChangeComplete={this.onColorPicked}
-              />
+            {this.state.showPicker && ColorPicker && (
+              <div style={{ position: 'fixed', top: 70, left: 50 }}>
+                <ColorPicker onChangeComplete={this.onColorPicked} />
+              </div>
             )}
           </>
         )}

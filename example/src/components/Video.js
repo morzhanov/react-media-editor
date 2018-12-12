@@ -1,4 +1,5 @@
 import React from 'react'
+import { SketchPicker } from 'react-color'
 // import { Editor, TYPE_VIDEO } from 'react-media-editor'
 import { Editor, TYPE_VIDEO } from '../../../dist/index.min'
 
@@ -32,7 +33,12 @@ class Video extends React.Component {
     return (
       <div className="page-wrapper editor">
         <div className="container">
-          <Editor type={TYPE_VIDEO} media={video} ratio={ratio} />
+          <Editor
+            colorPicker={SketchPicker}
+            type={TYPE_VIDEO}
+            media={video}
+            ratio={ratio}
+          />
         </div>
       </div>
     )

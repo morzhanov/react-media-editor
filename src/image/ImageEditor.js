@@ -19,10 +19,11 @@ class ImageEditor extends React.Component {
   }
 
   render() {
-    const { media } = this.props
+    const { media, colorPicker } = this.props
     return media ? (
       <div style={{ width: '100%' }}>
         <CanvasPainter
+          colorPicker={colorPicker}
           forceRedraw={this.renderImage}
           beforeRender={this.renderImage}
           ref={ref => {

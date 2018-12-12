@@ -17,6 +17,7 @@
   "license": "MIT",
   "dependencies": {
     "react": "^16.6.3",
+    "react-color": "^2.14.1",
     "react-dom": "^16.6.3",
     "react-media-editor": "latest"
   },

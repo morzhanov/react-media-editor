@@ -15,6 +15,7 @@
     "no-undef": 2,
     "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": "off",
     "semi": [2, "never"],
     "no-bitwise": "off",
     "comma-dangle": "off",

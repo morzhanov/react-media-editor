@@ -64,11 +64,12 @@ class CanvasPainter extends React.Component {
 
   render() {
     const { width, height } = this.state
-    const { style, children } = this.props
+    const { style, children, colorPicker } = this.props
 
     return (
       <div className="canvas-painter">
         <DrawTools
+          colorPicker={colorPicker}
           onUndo={this.controller.onUndo}
           onClear={this.controller.onClear}
           onSave={this.controller.onSave}
