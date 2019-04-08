@@ -10,13 +10,8 @@ class VideoEditor extends React.Component {
 
   componentDidMount() {
     const { src } = this.props
-
     const media = document.createElement('video')
     media.setAttribute('crossorigin', 'anonymous')
-    const source = document.createElement('source')
-    source.setAttribute('src', src)
-    media.appendChild(source)
-
     const checkLoad = () => {
       if (media.readyState === 4) {
         const ratio = media.videoWidth / media.videoHeight
@@ -25,9 +20,8 @@ class VideoEditor extends React.Component {
         setTimeout(checkLoad, 100)
       }
     }
-
-    window.addEventListener('load', checkLoad, false)
-    media.load()
+    media.src = src
+    checkLoad()
   }
 
   componentWillUnmount() {
@@ -52,8 +46,9 @@ class VideoEditor extends React.Component {
     const { media } = this.state
     const { colorPicker, src } = this.props
 
-    if (!media || !src) return null
-
+    if (!media || !src) {
+      return null
+    }
     return (
       <div style={{ width: '100%' }}>
         <CanvasPainter
