@@ -4,7 +4,6 @@
 
 [![npm version](https://badge.fury.io/js/react-media-editor.svg)](https://badge.fury.io/js/react-media-editor)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/morzhanov/react-media-editor/issues)
-[![HitCount](http://hits.dwyl.io/morzhanov/react-audio-comments.svg)](http://hits.dwyl.io/morzhanov/react-media-editor)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 <img src="https://i.imgur.com/e3B8bRP.png" alt="logo" />
